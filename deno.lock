@@ -993,7 +993,7 @@
   },
   "workspace": {
     "dependencies": [
-      "jsr:@fresh/core@^2.0.0-alpha.58",
+      "jsr:@fresh/core@2.0.0-alpha.59",
       "jsr:@fresh/plugin-vite@0.9",
       "npm:@preact/signals@^2.2.1",
       "npm:preact@^10.27.0",

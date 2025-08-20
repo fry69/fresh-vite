@@ -20,7 +20,7 @@
   ],
   "imports": {
     "@fresh/plugin-vite": "jsr:@fresh/plugin-vite@^0.9.0",
-    "fresh": "jsr:@fresh/core@^2.0.0-alpha.58",
+    "fresh": "jsr:@fresh/core@2.0.0-alpha.59",
     "preact": "npm:preact@^10.27.0",
     "@preact/signals": "npm:@preact/signals@^2.2.1",
     "vite": "npm:vite@^7.1.3"
