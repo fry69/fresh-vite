@@ -2,8 +2,8 @@
   "nodeModulesDir": "auto",
   "tasks": {
     "check": "deno fmt --check . && deno lint . && deno check",
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "deno run -A --watch=static/,routes/ dev.ts",
+    "build": "deno run -A dev.ts build",
     "start": "deno serve -A _fresh/server.js",
     "update": "deno run -A -r jsr:@fresh/update .",
     "check-deps": "deno run -A jsr:@check/deps --allow-unused"
