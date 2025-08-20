@@ -1,6 +1,6 @@
 # Variables
-DOCKER ?= podman
-COMPOSE := $(DOCKER)-compose -f ./compose.yaml
+DOCKER ?= docker
+COMPOSE := docker-buildx bake -f ./compose.yaml
 IMAGE_NAME := fresh-vite
 
 ## Application configuration
@@ -46,7 +46,7 @@ config:
 
 # Build all images
 build:
-	$(COMPOSE) build
+	$(COMPOSE)
 
 
 # Start services
