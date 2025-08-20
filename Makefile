@@ -31,18 +31,11 @@ help:
 	@echo "  config     - Show current configuration"
 	@echo "  build      - Build all images"
 	@echo "  up         - Start services"
-	@echo "  smart-up   - Start services (seed if needed)"
 	@echo "  rebuild    - Start services with rebuild"
 	@echo "  down       - Stop services"
 	@echo "  status     - Show service status and recent logs"
 	@echo "  logs       - Follow service logs"
-	@echo "  seed       - Seed database with initial data"
-	@echo "  reset      - Reset volume (destructive)"
-	@echo "  clean      - Remove containers and prune images"
-	@echo "  nuke       - Reset everything for clean rebuild"
 	@echo "  versions   - Check dependency versions"
-	@echo "  pre        - Pre-commit checks and sanitizing"
-	@echo "  dev        - Start the development server"
 
 # Show current configuration
 config:
@@ -50,7 +43,6 @@ config:
 	@echo "  DOCKER:             $(DOCKER)"
 	@echo "  IMAGE_NAME:         $(IMAGE_NAME)"
 	@echo "  EXTERNAL_PORT:      $(EXTERNAL_PORT)"
-
 
 # Build all images
 build:
