@@ -5,7 +5,7 @@ ENV DENO_DIR=/deno-dir/
 
 WORKDIR /app
 
-COPY deno.json deno.lock ./
+COPY deno.jsonc deno.lock ./
 # COPY vendor/ ./vendor/
 
 RUN deno install --allow-scripts
