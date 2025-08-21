@@ -94,3 +94,11 @@ versions:
 	$(call get_latest_version,@fresh/core)
 # 	$(call get_latest_version,@fresh/plugin-tailwind)
 
+.PHONY: vendor
+vendor:
+	@mkdir -p vendor
+	rm -fR vendor/plugin-vite && cp -a ../../denoland/fresh/packages/plugin-vite vendor
+
+pull:
+	$(DOCKER) pull docker.io/denoland/deno:latest
+
