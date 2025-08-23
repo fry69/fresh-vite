@@ -35,9 +35,7 @@
     "@preact/signals": "npm:@preact/signals@2.2.1",
     "vite": "npm:vite@7.1.3"
   },
-  "links": [
-    "./vendor/plugin-vite"
-  ],
+  // "links": [ "./vendor/plugin-vite" ],
   "compilerOptions": {
     "lib": [
       "dom",
