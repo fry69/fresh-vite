@@ -5,8 +5,12 @@
     "dev": "vite",
     "build": "vite build",
     "start": "deno serve -A _fresh/server.js",
+    "serve": "deno task build && deno task start",
     "update": "deno run -A -r jsr:@fresh/update .",
-    "check-deps": "deno run -A jsr:@check/deps --allow-unused"
+    "check-deps": "deno run -A jsr:@check/deps --allow-unused",
+    "test": "deno test -A tests/",
+    "test:e2e": "deno test -A tests/e2e.test.ts",
+    "test:full": "deno run -A tests/test-runner.ts"
   },
   "lint": {
     "rules": {
@@ -24,6 +28,8 @@
     "@fresh/plugin-vite": "jsr:@fresh/plugin-vite@0.9.2",
     "@std/expect": "jsr:@std/expect@1",
     "@std/path": "jsr:@std/path@1",
+    "@std/assert": "jsr:@std/assert@^1.0.2",
+    "@std/async": "jsr:@std/async@^1.0.1",
     "fresh": "jsr:@fresh/core@2.0.0-alpha.60",
     "preact": "npm:preact@^10.27.0",
     "@preact/signals": "npm:@preact/signals@2.2.1",
