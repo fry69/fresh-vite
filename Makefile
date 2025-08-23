@@ -98,6 +98,8 @@ versions:
 vendor:
 	@mkdir -p vendor
 	rm -fR vendor/plugin-vite && cp -a ../../denoland/fresh/packages/plugin-vite vendor
+	rm -fR vendor/plugin-vite/{.attic,demo,tests,README.md}
+	rm -fR vendor/plugin-vite/src/plugins/patches/*_test.ts
 
 pull:
 	$(DOCKER) pull docker.io/denoland/deno:latest
