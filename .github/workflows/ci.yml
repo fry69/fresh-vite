@@ -28,18 +28,18 @@ jobs:
         run: deno check **/*.ts **/*.tsx
 
       - name: Cache dependencies
-        run: deno cache dev.ts
+        run: deno cache main.ts
 
       - name: Start Fresh server in background
-        run: deno task dev &
+        run: deno task serve &
 
       - name: Wait for server to be ready
         run: |
-          timeout 30 bash -c 'until curl -s http://localhost:8000 > /dev/null; do sleep 1; done'
+          timeout 120 bash -c 'until curl -s http://localhost:8000 > /dev/null; do sleep 1; done'
           echo "Server is ready"
 
       - name: Run E2E tests
         run: deno task test:e2e
 
       - name: Stop server
-        run: pkill -f "deno task dev" || true
+        run: pkill -f "deno task serve" || true
