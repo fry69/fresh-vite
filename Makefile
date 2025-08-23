@@ -36,6 +36,10 @@ help:
 	@echo "  status     - Show service status and recent logs"
 	@echo "  logs       - Follow service logs"
 	@echo "  versions   - Check dependency versions"
+	@echo "  clean      - Remove containers and prune images"
+	@echo "  prune      - Remove generated files"
+	@echo "  vendor     - Vendor local copy of @fresh/plugin-vite"
+	@echo "  pull       - Pull latest Deno image"
 
 # Show current configuration
 config:
@@ -47,7 +51,6 @@ config:
 # Build all images
 build:
 	$(COMPOSE) build
-
 
 # Start services
 up:
